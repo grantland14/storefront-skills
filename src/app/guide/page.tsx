@@ -570,7 +570,7 @@ function CodeBlock({ label, children }: { label?: string; children: string }) {
   }, [children]);
 
   return (
-    <div className="relative bg-[#1e1e1e] rounded-lg overflow-hidden my-6">
+    <div className="relative bg-[#1e1e1e] rounded-lg overflow-hidden my-6 max-w-full">
       {label && (
         <div className="px-5 pt-3 pb-0 text-[#888] text-[12px] font-[family-name:var(--font-mono)] uppercase tracking-wider">
           {label}
@@ -611,13 +611,24 @@ function SkillBadge({ children }: { children: string }) {
    NAVIGATION
    ════════════════════════════════════════════════════════════ */
 
-function GuideNav() {
+function GuideNav({ onMenuToggle }: { onMenuToggle?: () => void }) {
   return (
     <nav className="fixed top-0 left-0 w-full h-[86px] z-50 bg-[#f9f5f2]/80 backdrop-blur-md">
       <div className="max-w-[1440px] mx-auto h-full relative px-[120px] max-lg:px-8 max-sm:px-4">
         <a href="/" className="absolute left-[120px] max-lg:left-8 max-sm:left-4 top-1/2 -translate-y-1/2">
           <Image src="/assets/storefront-skills-logo.svg" alt="Storefront Skills" width={175} height={24} className="max-sm:w-[140px] max-sm:h-auto" />
         </a>
+        {onMenuToggle && (
+          <button
+            onClick={onMenuToggle}
+            className="absolute right-8 max-sm:right-4 top-1/2 -translate-y-1/2 lg:hidden w-[40px] h-[40px] flex items-center justify-center text-[#303030] hover:text-[#d97757] transition-colors cursor-pointer"
+            aria-label="Table of contents"
+          >
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </button>
+        )}
       </div>
     </nav>
   );
@@ -630,15 +641,19 @@ function GuideNav() {
 function TableOfContents({
   activeSection,
   onClose,
+  hideLabel,
 }: {
   activeSection: string;
   onClose?: () => void;
+  hideLabel?: boolean;
 }) {
   return (
     <div className="space-y-1">
-      <p className="text-[#666] text-[12px] tracking-[0.48px] font-[family-name:var(--font-heading)] font-semibold uppercase mb-3 px-3">
-        On this page
-      </p>
+      {!hideLabel && (
+        <p className="text-[#666] text-[12px] tracking-[0.48px] font-[family-name:var(--font-heading)] font-semibold uppercase mb-3 px-3">
+          On this page
+        </p>
+      )}
       {TOC_ITEMS.map((item) => (
         <a
           key={item.id}
@@ -1408,8 +1423,8 @@ function GuideContent() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f9f5f2] overflow-x-hidden">
-      <GuideNav />
+    <main className="min-h-screen bg-[#f9f5f2]">
+      <GuideNav onMenuToggle={() => setTocOpen(true)} />
       <GuideHero />
 
       <div className="max-w-[1440px] mx-auto px-[120px] max-lg:px-8 max-sm:px-4 pb-[80px]">
@@ -1439,17 +1454,6 @@ function GuideContent() {
         </div>
       </div>
 
-      {/* Mobile TOC button */}
-      <button
-        onClick={() => setTocOpen(true)}
-        className="fixed bottom-6 right-6 z-40 lg:hidden w-[48px] h-[48px] bg-[#171717] text-[#f9f5f2] rounded-full shadow-lg flex items-center justify-center hover:bg-[#333] transition-colors cursor-pointer"
-        aria-label="Table of contents"
-      >
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-      </button>
-
       {/* Mobile TOC overlay */}
       {tocOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
@@ -1466,7 +1470,7 @@ function GuideContent() {
                 </svg>
               </button>
             </div>
-            <TableOfContents activeSection={activeSection} onClose={() => setTocOpen(false)} />
+            <TableOfContents activeSection={activeSection} onClose={() => setTocOpen(false)} hideLabel />
           </div>
         </div>
       )}
