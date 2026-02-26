@@ -811,153 +811,6 @@ function ThreeSteps() {
   );
 }
 
-/* ───────── Data Integration ───────── */
-function DataSection() {
-  return (
-    <section className="py-[80px] px-[120px] max-lg:px-8 max-sm:px-4 max-w-[1440px] mx-auto">
-      <div className="text-center flex flex-col gap-6 items-center mb-[60px]">
-        <p className="text-[#666] text-[17px] tracking-[0.68px] font-[family-name:var(--font-heading)] font-semibold uppercase">Your Data, Connected</p>
-        <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px] max-w-[843px]">
-          Get insights based on your real-time data
-        </h2>
-        <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[843px]">
-          Claude can connect your Shopify, Klaviyo, Meta Ads, Google Ads, and TikTok, so the Storefront Claude Skills can pull real data before giving you advice. You can upload data (.csv files, JSON, files, PDFs) from other sources, too.
-        </p>
-      </div>
-
-      {/* Data visualization */}
-      <div className="relative mb-[60px] max-md:hidden" style={{ height: 300 }}>
-        {/* Far left column — 3 platform icons */}
-        <div className="absolute left-[160px] top-0 flex flex-col gap-[28px] z-[2]">
-          {[
-            { src: "/assets/shopify.svg", w: 43, h: 49 },
-            { src: "/assets/meta.svg", w: 38, h: 25 },
-            { src: "/assets/tiktok.svg", w: 36, h: 36 },
-          ].map((logo, i) => (
-            <div key={i} className="w-[73px] h-[73px] bg-[#fffaf6] border-[0.5px] border-[rgba(115,114,108,0.4)] rounded-[5px] flex items-center justify-center">
-              <Image src={logo.src} alt="" width={logo.w} height={logo.h} />
-            </div>
-          ))}
-        </div>
-
-        {/* Inner left column — 2 platform icons */}
-        <div className="absolute left-[267px] top-[51px] flex flex-col gap-[28px] z-[2]">
-          {[
-            { src: "/assets/klaviyo.svg", w: 55, h: 16 },
-            { src: "/assets/google-ads.svg", w: 40, h: 39 },
-          ].map((logo, i) => (
-            <div key={i} className="w-[73px] h-[73px] bg-[#fffaf6] border-[0.5px] border-[rgba(115,114,108,0.4)] rounded-[5px] flex items-center justify-center">
-              <Image src={logo.src} alt="" width={logo.w} height={logo.h} />
-            </div>
-          ))}
-        </div>
-
-        {/* Connecting SVG lines */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none z-[1]" viewBox="0 0 1200 300" fill="none" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="lineGradL" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#d97757" stopOpacity="0" />
-              <stop offset="100%" stopColor="#d97757" stopOpacity="0.6" />
-            </linearGradient>
-            <linearGradient id="lineGradR" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#d97757" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#d97757" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          {/* Far-left icons to inner icons */}
-          <path d="M233 36 C280 36, 280 87, 303 87" stroke="url(#lineGradL)" strokeWidth="1" />
-          <path d="M233 36 C300 36, 420 50, 554 150" stroke="url(#lineGradL)" strokeWidth="1" />
-          <path d="M233 136 C350 136, 450 142, 554 150" stroke="url(#lineGradL)" strokeWidth="1" />
-          <path d="M233 237 C280 237, 280 188, 303 188" stroke="url(#lineGradL)" strokeWidth="1" />
-          <path d="M233 237 C300 237, 420 220, 554 150" stroke="url(#lineGradL)" strokeWidth="1" />
-          {/* Inner icons to center */}
-          <path d="M340 87 C420 87, 480 110, 554 150" stroke="url(#lineGradL)" strokeWidth="1" />
-          <path d="M340 188 C420 188, 480 170, 554 150" stroke="url(#lineGradL)" strokeWidth="1" />
-          {/* Nearly straight line through middle */}
-          <path d="M340 137 C400 137, 480 145, 554 150" stroke="url(#lineGradL)" strokeWidth="1" />
-          {/* Center to right cards */}
-          <path d="M646 150 C700 150, 730 80, 784 38" stroke="url(#lineGradR)" strokeWidth="1" />
-          <path d="M646 150 C720 150, 780 142, 849 134" stroke="url(#lineGradR)" strokeWidth="1" />
-          <path d="M646 150 C700 150, 730 210, 824 230" stroke="url(#lineGradR)" strokeWidth="1" />
-          {/* Dots at right card endpoints */}
-          <circle cx="784" cy="38" r="2.5" fill="#d97757" opacity="0.5" />
-          <circle cx="849" cy="134" r="2.5" fill="#d97757" opacity="0.5" />
-          <circle cx="824" cy="230" r="2.5" fill="#d97757" opacity="0.5" />
-        </svg>
-
-        {/* Center Claude hub */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92px] h-[92px] bg-[#fffaf6] rounded-full shadow-[0px_2px_12.3px_5px_rgba(217,119,87,0.2)] overflow-hidden flex items-center justify-center z-10">
-          <Image src="/assets/claude-logo.svg" alt="Claude" width={46} height={46} />
-        </div>
-
-        {/* Right side — data insight cards */}
-        <div className="absolute left-[784px] top-[14px] w-[268px] z-[2]">
-          <div className="bg-[#f0eee5] rounded-[5px] p-2.5 flex items-center gap-3">
-            <Image src="/assets/shopify.svg" alt="" width={30} height={33} className="shrink-0" />
-            <p className="text-[#141413] text-[14px] leading-[1.2] tracking-[-0.42px] font-[family-name:var(--font-mono)]"><span className="font-medium text-[15px]">Your top product last month: </span>Lavender Candle ($4,200 revenue)</p>
-          </div>
-        </div>
-        <div className="absolute left-[849px] top-[110px] w-[268px] z-[2]">
-          <div className="bg-[#f0eee5] rounded-[5px] p-2.5 flex items-center gap-3">
-            <Image src="/assets/klaviyo.svg" alt="" width={33} height={22} className="shrink-0" />
-            <p className="text-[#141413] text-[14px] leading-[1.2] tracking-[-0.42px] font-[family-name:var(--font-mono)]"><span className="font-medium text-[15px]">Your welcome flow is </span>converting at 22% (above industry avg)</p>
-          </div>
-        </div>
-        <div className="absolute left-[824px] top-[206px] w-[268px] z-[2]">
-          <div className="bg-[#f0eee5] rounded-[5px] p-2.5 flex items-center gap-3">
-            <Image src="/assets/meta.svg" alt="" width={35} height={23} className="shrink-0" />
-            <p className="text-[#141413] text-[14px] leading-[1.2] tracking-[-0.42px] font-[family-name:var(--font-mono)]"><span className="font-medium text-[15px]">Your best performing hook: </span>&apos;Before/After&apos; creative, ROAS 3.1x&quot;</p>
-          </div>
-        </div>
-      </div>
-
-        {/* Mobile data cards */}
-        <div className="hidden max-md:flex flex-col gap-4 mb-[60px]">
-          <div className="flex justify-center gap-4 mb-2 flex-wrap">
-            {[
-              { src: "/assets/shopify.svg", w: 43, h: 49 },
-              { src: "/assets/meta.svg", w: 38, h: 25 },
-              { src: "/assets/tiktok.svg", w: 36, h: 36 },
-              { src: "/assets/klaviyo.svg", w: 55, h: 16 },
-              { src: "/assets/google-ads.svg", w: 40, h: 39 },
-            ].map((logo, i) => (
-              <div key={i} className="w-[60px] h-[60px] bg-[#fffaf6] border-[0.5px] border-[rgba(115,114,108,0.4)] rounded-[5px] flex items-center justify-center">
-                <Image src={logo.src} alt="" width={logo.w * 0.7} height={logo.h * 0.7} />
-              </div>
-            ))}
-          </div>
-          <div className="bg-[#f0eee5] rounded-[5px] p-3 flex items-center gap-3">
-            <Image src="/assets/shopify.svg" alt="" width={30} height={33} className="shrink-0" />
-            <p className="text-[#141413] text-[14px] leading-[1.3] tracking-[-0.42px] font-[family-name:var(--font-mono)]"><span className="font-medium text-[15px]">Your top product last month: </span>Lavender Candle ($4,200 revenue)</p>
-          </div>
-          <div className="bg-[#f0eee5] rounded-[5px] p-3 flex items-center gap-3">
-            <Image src="/assets/klaviyo.svg" alt="" width={33} height={22} className="shrink-0" />
-            <p className="text-[#141413] text-[14px] leading-[1.3] tracking-[-0.42px] font-[family-name:var(--font-mono)]"><span className="font-medium text-[15px]">Your welcome flow is </span>converting at 22% (above industry avg)</p>
-          </div>
-          <div className="bg-[#f0eee5] rounded-[5px] p-3 flex items-center gap-3">
-            <Image src="/assets/meta.svg" alt="" width={35} height={23} className="shrink-0" />
-            <p className="text-[#141413] text-[14px] leading-[1.3] tracking-[-0.42px] font-[family-name:var(--font-mono)]"><span className="font-medium text-[15px]">Your best performing hook: </span>&apos;Before/After&apos; creative, ROAS 3.1x</p>
-          </div>
-        </div>
-
-      {/* Bottom two-column text */}
-      <div className="flex gap-[40px] max-lg:flex-col">
-        <div className="border-t border-[#c8bfb3] pt-[40px] w-[500px] max-lg:w-full">
-          <h3 className="text-black text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-6 max-w-[355px]">Teach It Once, It Remembers Everything</h3>
-          <p className="text-[#666] text-[17px] leading-[1.2] tracking-[-0.34px] max-w-[493px]">
-            Using the Brand Guide Skill, every specialist starts with a strong understanding of your brand. Your email strategist knows your voice. Your CFO knows your margins. Your ad copywriter knows your competitors.
-          </p>
-        </div>
-        <div className="border-t border-[#c8bfb3] pt-[40px] w-[500px] max-lg:w-full">
-          <h3 className="text-black text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-6 max-w-[275px]">Real Data, Not Guesswork</h3>
-          <p className="text-[#666] text-[17px] leading-[1.2] tracking-[-0.34px] max-w-[493px]">
-            When you ask &ldquo;how are my Meta ads performing?&rdquo; You can ensure you&apos;re getting insights based on real data from your actual ad account. When you ask &ldquo;what&apos;s my best-selling product?&rdquo; It looks at your real Shopify data. Every recommendation is grounded in your numbers, not assumptions.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ───────── Pricing ───────── */
 function Pricing() {
@@ -978,9 +831,8 @@ function Pricing() {
             <div className="relative z-10">
               <h3 className="text-[#303030] text-[25px] leading-[1.2] tracking-[-0.5px]">The Full Team</h3>
               <p className="text-[#666] text-[17px] leading-[1.2] tracking-[-0.34px] mt-2 w-[310px]">All 14 Claude Skills trained to be eCommerce specialists.</p>
-              <div className="flex items-center gap-2 mt-6">
+              <div className="mt-6">
                 <span className="text-[#303030] text-[45px] max-sm:text-[36px] leading-[1.2] tracking-[-1.8px]">$97</span>
-                <span className="text-[#303030] text-[45px] max-sm:text-[36px] leading-[1.2] tracking-[-1.8px] line-through opacity-25">$349</span>
               </div>
               <p className="text-[#7b7b7b] text-[14px] leading-[1.2] tracking-[-0.28px]">Less than $7 per skill · Launch Price</p>
               <div className="h-px bg-[#c8bfb3] my-6" />
@@ -1324,7 +1176,6 @@ export default function Home() {
       <TeamSpecialists />
       <WhatYouGet />
       <ThreeSteps />
-      <DataSection />
       <Pricing />
       <Credibility />
       {/* <Testimonials /> */}
