@@ -539,6 +539,17 @@ function TeamSpecialists() {
             </div>
           ))}
         </div>
+
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">All 14 Skills included:</p>
+          <div className="flex flex-wrap justify-center gap-[10px] max-w-[750px]">
+            {["Brand Guide", "Marketing Analyst", "Buyer Psychology", "Fractional CFO", "Competitive Intelligence", "Copywriter", "Email Strategist & Writer", "Product Page Expert", "Product Launch Director", "Ad Copywriter", "Popup Strategist", "Social Content Strategist", "VC Analyst", "Pricing Strategist"].map((skill) => (
+              <span key={skill} className="bg-[#f0ede8] border border-[#ddd5cc] text-[#555] text-[14px] leading-[1.2] tracking-[-0.28px] rounded-full px-[14px] py-[8px]">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
