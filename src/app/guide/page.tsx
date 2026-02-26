@@ -831,12 +831,12 @@ function HowToInstall() {
       <SectionLabel>Setup</SectionLabel>
       <SectionHeading>How to Install</SectionHeading>
       <Prose>
-        <h3 className="text-[#303030] text-[22px] tracking-[-0.44px] font-medium mt-8 mb-4">Option 1: Install all skills at once</h3>
+        <h3 className="text-[#303030] text-[22px] tracking-[-0.44px] font-medium mt-8 mb-4">Option 1: Manually add them to Claude</h3>
+        <p>Open up the Claude desktop app. Go to Cowork, click Customize, select &apos;+&apos; labeled &apos;Add plugin&apos; and upload the Zip file shared with you when you purchase Storefront Skills.</p>
+
+        <h3 className="text-[#303030] text-[22px] tracking-[-0.44px] font-medium mt-8 mb-4">Option 2: Install all skills at once</h3>
         <CodeBlock label="Terminal">{`git clone https://github.com/grantland14/Claude-Skills-for-eCommerce.git\nmkdir -p ~/.claude/skills\ncp -rn Claude-Skills-for-eCommerce/skills/ecommerce-* ~/.claude/skills/`}</CodeBlock>
         <p>This copies all 14 skills into your Claude Code skills directory. Claude will automatically detect and use them in relevant conversations.</p>
-
-        <h3 className="text-[#303030] text-[22px] tracking-[-0.44px] font-medium mt-8 mb-4">Option 2: Manually add them to Claude</h3>
-        <p>Open up the Claude desktop app. Go to Cowork, click Customize, select &apos;+&apos; labeled &apos;Add plugin&apos; and upload the Zip file shared with you when you purchase Storefront Skills.</p>
 
         <h3 className="text-[#303030] text-[22px] tracking-[-0.44px] font-medium mt-8 mb-4">After installation</h3>
         <p>
@@ -1327,7 +1327,7 @@ function GuideFooter() {
    PAGE COMPOSITION
    ════════════════════════════════════════════════════════════ */
 
-const GUIDE_PASSWORD = "Storefront2026!";
+const GUIDE_PASSWORD = "VIP";
 const STORAGE_KEY = "guide-unlocked";
 
 function PasswordGate({ children }: { children: React.ReactNode }) {

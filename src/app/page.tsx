@@ -31,7 +31,7 @@ function Nav() {
         {/* CTA */}
         <a
           href="#pricing"
-          className="absolute right-[120px] max-lg:right-8 max-sm:right-4 top-1/2 -translate-y-1/2 bg-[#171717] text-[#f9f5f2] rounded-[30px] px-[14px] py-[14px] max-[420px]:px-[10px] max-[420px]:py-[10px] text-[16px] max-[420px]:text-[14px] tracking-[-0.32px] font-[family-name:var(--font-heading)] font-medium hover:bg-[#333] transition-colors"
+          className="absolute right-[120px] max-lg:right-8 max-sm:right-4 top-1/2 -translate-y-1/2 bg-[#171717] text-[#f9f5f2] rounded-[30px] px-[14px] py-[8px] max-[420px]:px-[10px] max-[420px]:py-[6px] text-[16px] max-[420px]:text-[14px] tracking-[-0.32px] font-[family-name:var(--font-heading)] font-medium hover:bg-[#333] transition-colors"
         >
           <span className="max-[420px]:hidden">Get Your Team</span>
           <span className="hidden max-[420px]:inline">Get Team</span>
@@ -66,8 +66,11 @@ function Hero() {
           <h1 className="font-[family-name:var(--font-heading)] text-[#303030] text-[64px] max-lg:text-[48px] max-sm:text-[36px] leading-[1.2] tracking-[-2.56px] font-medium">
             Turn Claude into an eCommerce team that drives results.
           </h1>
-          <p className="text-[#666] text-[22px] max-sm:text-[18px] leading-[1.2] tracking-[-0.44px] max-w-[792px] max-sm:max-w-full">
-            14 Claude Skills built around your business. Your brand. Your products. Your numbers. Write emails, plan launches, analyze your P&L, and research competitor ads without starting from scratch every time. Install once, use forever.
+          <p className="text-[#303030] text-[25px] max-sm:text-[20px] leading-[1.2] tracking-[-0.5px] font-[family-name:var(--font-heading)] font-medium">
+            14 Claude Skills built around your business.
+          </p>
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[680px] max-sm:max-w-full">
+            Your brand. Your products. Your numbers. Write emails, plan launches, analyze your P&L, and research competitor ads without starting from scratch every time. Install once, use forever.
           </p>
         </div>
 
@@ -75,14 +78,14 @@ function Hero() {
         <div className="flex flex-col gap-3 items-center">
           <a
             href="#pricing"
-            className="bg-[rgba(200,200,200,0.1)] border border-[#e9e9e9] rounded-[500px] px-[34px] py-[20px] flex items-center gap-3 hover:bg-[rgba(200,200,200,0.2)] transition-colors"
+            className="bg-[#171717] rounded-[500px] px-[34px] py-[12px] flex items-center gap-3 hover:bg-[#333] transition-colors"
           >
-            <span className="font-[family-name:var(--font-heading)] text-[#171717] text-[16px] tracking-[-0.32px] font-medium">
+            <span className="font-[family-name:var(--font-heading)] text-[#f9f5f2] text-[16px] tracking-[-0.32px] font-medium">
               Get Your Team
             </span>
-            <Image src="/assets/arrow-right.svg" alt="" width={30} height={30} />
+            <Image src="/assets/arrow-right.svg" alt="" width={30} height={30} className="invert" />
           </a>
-          <p className="text-[#7b7b7b] text-[14px] leading-[1.2] tracking-[-0.28px] opacity-60">
+          <p className="text-[#7b7b7b] text-[14px] leading-[1.2] tracking-[-0.28px]">
             One-time purchase · Works in 5 minutes · No coding required
           </p>
         </div>
@@ -260,7 +263,7 @@ function Hero() {
       {/* Integration logos */}
       <div className="mt-[60px] flex flex-col items-center gap-3">
         <p className="text-[#7b7b7b] text-[17px] leading-[1.2] tracking-[-0.34px] text-center">
-          Connects to your real store data
+          Translates your store data into action
         </p>
         <div className="flex items-center gap-16 max-sm:gap-6 flex-wrap justify-center">
           <Image src="/assets/shopify.svg" alt="Shopify" width={42} height={48} />
@@ -292,7 +295,7 @@ function BrandGuideComparison() {
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px]">
             Stop re-explaining your brand to AI every single time.
           </h2>
-          <p className="text-[#666] text-[22px] leading-[1.2] tracking-[-0.44px] max-w-[370px] mx-auto">
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[370px] mx-auto">
             Every other AI tool starts from zero. Your team already knows who you are.
           </p>
         </div>
@@ -496,7 +499,7 @@ function TeamSpecialists() {
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px]">
             Just type what you need. Your team handles the rest.
           </h2>
-          <p className="text-[#666] text-[22px] leading-[1.2] tracking-[-0.44px]">
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
             Real prompts. Real output. No prompt engineering required.
           </p>
         </div>
@@ -607,7 +610,7 @@ function WhatYouGet() {
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px] max-w-[795px]">
             A Full Team That Grows Revenue, Gets Customers & Runs Your Numbers
           </h2>
-          <p className="text-[#666] text-[22px] leading-[1.2] tracking-[-0.44px] max-w-[795px]">
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[795px]">
             14 Claude Skills, each trained on proven eCommerce playbooks. With the Brand Kit, each Skill already knows your brand the moment you start talking.
           </p>
         </div>
@@ -627,7 +630,7 @@ function WhatYouGet() {
                 <div key={group.name} className="bg-[#faf9f6] border border-[#c8bfb3] rounded-lg overflow-hidden min-w-[996px] h-[361px] flex shrink-0">
                   <div className="w-[397px] pl-[39px] pr-0 pt-[59px] pb-[39px] flex flex-col gap-[16px]">
                     <h3 className="text-[#333] text-[36px] leading-[1.2] tracking-[-1.44px]">{group.name}</h3>
-                    <p className="text-[#666] text-[22px] leading-[1.2] tracking-[-0.44px] max-w-[357px]">{group.description}</p>
+                    <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[357px]">{group.description}</p>
                   </div>
                   <div className="bg-[#f8f2e9] rounded-lg m-[16px] ml-auto w-[518px] px-[40px] py-[28px] flex flex-col justify-center">
                     <p className="text-[#666] text-[17px] tracking-[-0.34px] font-[family-name:var(--font-heading)] font-medium mb-[24px]">They handle:</p>
@@ -679,7 +682,7 @@ function WhatYouGet() {
             <div key={group.name} className="bg-[#faf9f6] border border-[#c8bfb3] rounded-lg overflow-hidden w-full flex-col">
               <div className="pl-[24px] pr-[24px] pt-[32px] pb-[24px] flex flex-col gap-[16px]">
                 <h3 className="text-[#333] text-[28px] leading-[1.2] tracking-[-1.12px]">{group.name}</h3>
-                <p className="text-[#666] text-[18px] leading-[1.2] tracking-[-0.36px]">{group.description}</p>
+                <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">{group.description}</p>
               </div>
               <div className="bg-[#f8f2e9] rounded-lg m-[12px] px-[24px] py-[24px] flex flex-col justify-center">
                 <p className="text-[#666] text-[17px] tracking-[-0.34px] font-[family-name:var(--font-heading)] font-medium mb-[20px]">They handle:</p>
@@ -731,7 +734,7 @@ function ThreeSteps() {
               <span className="text-[#d97757] text-[25px] leading-[1.2] tracking-[-0.5px]">Install</span>
             </div>
             <h3 className="text-[#333] text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-4">Download and drop into Claude</h3>
-            <p className="text-[#666] text-[22px] max-sm:text-[18px] leading-[1.2] tracking-[-0.44px]">
+            <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
               Purchase your team, download the pack, and add it to Claude. All 14 specialists activate instantly. No setup wizards, no configuration screens, no onboarding calls. If you can drag and drop a file, you can do this.
             </p>
           </div>
@@ -764,7 +767,7 @@ function ThreeSteps() {
               <span className="text-[#d97757] text-[25px] leading-[1.2] tracking-[-0.5px]">Describe Your Brand</span>
             </div>
             <h3 className="text-[#333] text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-4">Teach your team who you are (just once)</h3>
-            <p className="text-[#666] text-[22px] max-sm:text-[18px] leading-[1.2] tracking-[-0.44px]">
+            <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
               Your Brand Strategist walks you through a friendly conversation to capture your voice, products, customers, and goals. It takes about 15 minutes and feels like an intake call with a new agency — except this one remembers everything forever.
             </p>
           </div>
@@ -789,7 +792,7 @@ function ThreeSteps() {
               <span className="text-[#d97757] text-[25px] leading-[1.2] tracking-[-0.5px]">Start Asking</span>
             </div>
             <h3 className="text-[#333] text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-4">Talk to your team like you&apos;d talk to a coworker</h3>
-            <p className="text-[#666] text-[22px] max-sm:text-[18px] leading-[1.2] tracking-[-0.44px]">
+            <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
               That&apos;s it. Ask for anything: &ldquo;Write me a Black Friday email.&rdquo; &ldquo;Audit my product page.&rdquo; &ldquo;What&apos;s my real cost per customer?&rdquo; Your team delivers production-ready work, personalized to your brand, in minutes.
             </p>
           </div>
@@ -817,7 +820,7 @@ function DataSection() {
         <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px] max-w-[843px]">
           Get insights based on your real-time data
         </h2>
-        <p className="text-[#666] text-[22px] leading-[1.2] tracking-[-0.44px] max-w-[843px]">
+        <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[843px]">
           Claude can connect your Shopify, Klaviyo, Meta Ads, Google Ads, and TikTok, so the Storefront Claude Skills can pull real data before giving you advice. You can upload data (.csv files, JSON, files, PDFs) from other sources, too.
         </p>
       </div>
@@ -964,7 +967,7 @@ function Pricing() {
         <div className="text-center flex flex-col gap-6 items-center">
           <p className="text-[#666] text-[17px] tracking-[0.68px] font-[family-name:var(--font-heading)] font-semibold uppercase">Unlimited Use, One Price</p>
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px]">One Price. Your Whole Team. Forever.</h2>
-          <p className="text-[#666] text-[22px] leading-[1.2] tracking-[-0.44px] max-w-[843px]">No subscriptions. No hidden fees. Pay once, use your team forever.</p>
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[843px]">No subscriptions. No hidden fees. Pay once, use your team forever.</p>
         </div>
 
         <div className="flex justify-center w-full">
@@ -976,10 +979,10 @@ function Pricing() {
               <h3 className="text-[#303030] text-[25px] leading-[1.2] tracking-[-0.5px]">The Full Team</h3>
               <p className="text-[#666] text-[17px] leading-[1.2] tracking-[-0.34px] mt-2 w-[310px]">All 14 Claude Skills trained to be eCommerce specialists.</p>
               <div className="flex items-center gap-2 mt-6">
-                <span className="text-[#303030] text-[45px] max-sm:text-[36px] leading-[1.2] tracking-[-1.8px]">$197</span>
+                <span className="text-[#303030] text-[45px] max-sm:text-[36px] leading-[1.2] tracking-[-1.8px]">$97</span>
                 <span className="text-[#303030] text-[45px] max-sm:text-[36px] leading-[1.2] tracking-[-1.8px] line-through opacity-25">$349</span>
               </div>
-              <p className="text-[#aeaeae] text-[14px] leading-[1.2] tracking-[-0.28px]">(Launch Price)</p>
+              <p className="text-[#7b7b7b] text-[14px] leading-[1.2] tracking-[-0.28px]">Less than $7 per skill · Launch Price</p>
               <div className="h-px bg-[#c8bfb3] my-6" />
               <div className="space-y-4">
                 {["All 14 AI team members", "Brand Guide to ensure answers are unique to your business", "Every future update included free", "Lifetime access + updates"].map((f) => (
@@ -1231,13 +1234,13 @@ function FinalCTA() {
           <h2 className="text-[#303030] text-[64px] max-lg:text-[48px] max-sm:text-[36px] leading-[1.2] tracking-[-2.56px] font-[family-name:var(--font-heading)] font-medium max-w-[890px]">
             Your Team Is Ready. Are You?
           </h2>
-          <p className="text-[#666] text-[22px] max-sm:text-[18px] leading-[1.2] tracking-[-0.44px] max-w-[572px]">
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[572px]">
             14 specialists who know your brand. Production-ready work in minutes. One price, forever.
           </p>
         </div>
         <div className="flex gap-3 max-sm:flex-col max-sm:w-full max-sm:items-center max-sm:px-4">
           <a href="#pricing" className="bg-[#171717] text-[#f9f5f2] rounded-[30px] px-8 py-[14px] flex items-center justify-center text-[16px] leading-normal tracking-[-0.32px] font-[family-name:var(--font-heading)] font-medium hover:bg-[#333] transition-colors whitespace-nowrap">
-            Get The Full Team — $197
+            Get The Full Team — $97
           </a>
           <a href="#what-you-get" className="bg-[#faf9f6] border border-[#c8bfb3] text-[#303030] rounded-[30px] px-8 py-[14px] flex items-center justify-center text-[16px] leading-normal tracking-[-0.32px] font-[family-name:var(--font-heading)] font-medium hover:bg-[#f0ede6] transition-colors whitespace-nowrap">
             See What&apos;s Included
