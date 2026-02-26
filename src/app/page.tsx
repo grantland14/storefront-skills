@@ -293,10 +293,10 @@ function BrandGuideComparison() {
         {/* Header */}
         <div className="text-center max-w-[567px] flex flex-col gap-6">
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px]">
-            Stop re-explaining your brand to AI every single time.
+            You&apos;ve already told AI about your brand. Five times this week.
           </h2>
-          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[370px] mx-auto">
-            Every other AI tool starts from zero. Your team already knows who you are.
+          <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] mx-auto">
+            Every other AI tool starts from zero. Claude Skills are trained on your brand — your voice, your products, your margins, your customers. Build your Brand Guide, and every specialist uses that context forever.
           </p>
         </div>
 
@@ -497,10 +497,10 @@ function TeamSpecialists() {
       <div className="flex flex-col items-center gap-[46px]">
         <div className="text-center max-w-[567px] flex flex-col gap-6">
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px]">
-            Just type what you need. Your team handles the rest.
+            Talk to our Claude Skills like you&apos;d talk to a coworker.
           </h2>
           <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
-            Real prompts. Real output. No prompt engineering required.
+            No prompt engineering. No re-explaining your brand. Just say what you need.
           </p>
         </div>
 
@@ -547,33 +547,35 @@ function TeamSpecialists() {
 /* ───────── What You Get (Carousel) ───────── */
 const teamGroups = [
   {
-    name: "The Revenue Team",
-    description: "Your Email Strategist, Conversion Copywriter, Product Page Expert, and Popup Specialist — working together to turn visitors into customers.",
+    name: "The Revenue Skills",
+    description: "Your Email Strategist, Conversion Copywriter, Product Page Expert, and Popup Specialist — working together across your entire on-site experience.",
     items: [
-      "Writing email sequences that sound like you (welcome, abandoned cart, post-purchase, promos)",
-      "Product page copy that actually sells",
-      "Landing pages and popups that capture emails without annoying visitors",
-      "Launch sequences when you drop new products",
+      "Email sequences that sound like your brand — welcome, abandoned cart, post-purchase, win-back, and promos",
+      "Product page copy that answers the 5 questions every buyer has before they click \"Add to Cart\"",
+      "Landing pages and popups that capture emails without killing the browsing experience",
+      "Launch sequences that turn a new product into a first-week revenue spike",
     ],
   },
   {
     name: "The Growth Team",
-    description: "Your Ad Copywriter, Media Strategist, Social Content Writer, and Launch Director — bringing in new customers across every channel.",
+    description: "Your Ad Copywriter, Media Strategist, Social Content Writer, and Launch Director — handling acquisition across every channel your customers use.",
     items: [
-      "Facebook and Instagram ad copy that stops the scroll",
-      "Google Shopping and TikTok ad strategy",
-      "Social media content calendars and captions",
-      "Full product launch plans from pre-buzz to post-launch",
+      "Meta and Instagram ad copy that stops the scroll — hooks, headlines, descriptions, and UGC briefs",
+      "Google Shopping and Performance Max strategy built around your actual product feed",
+      "TikTok ad scripts that feel native, not corporate",
+      "Full product launch plans from 6-week seeding to post-launch sustain",
+      "Social content calendars with actual post ideas — not \"post something inspirational on Monday\"",
     ],
   },
   {
     name: "The Strategy Team",
-    description: "Your Fractional CFO, Pricing Strategist, Marketing Analyst, Competitor Researcher, and Investor Advisor — making sure every decision is backed by real data.",
+    description: "Your Fractional CFO, Pricing Strategist, Marketing Analyst, Competitor Researcher, and Investor Advisor — making sure every decision is backed by your real numbers.",
     items: [
-      "P&L analysis and margin optimization (in plain English, not accountant-speak)",
-      "Pricing and bundle strategy to increase average order value",
-      "Reading your Shopify, Klaviyo, and ad data to spot what's working",
-      "Researching what your competitors are doing and finding gaps you can own",
+      "P&L analysis that tells you where money is leaking — in plain English",
+      "Pricing and bundle strategy based on your actual margins, not guesswork",
+      "Marketing channel analysis that shows what's really driving revenue (not what Meta claims is driving revenue)",
+      "Competitor intelligence that finds gaps in their positioning you can own",
+      "Investor-readiness assessments and pitch deck guidance when you're ready to raise",
     ],
   },
 ];
@@ -608,10 +610,10 @@ function WhatYouGet() {
         <div className="text-center flex flex-col gap-6 items-center mb-[48px]">
           <p className="text-[#666] text-[17px] tracking-[0.68px] font-[family-name:var(--font-heading)] font-semibold uppercase">WHAT YOU GET</p>
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px] max-w-[795px]">
-            A Full Team That Grows Revenue, Gets Customers & Runs Your Numbers
+            A full marketing and operations team — for less than the price of one freelancer for one hour.
           </h2>
           <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] max-w-[795px]">
-            14 Claude Skills, each trained on proven eCommerce playbooks. With the Brand Kit, each Skill already knows your brand the moment you start talking.
+            14 Claude Skills, each built on real DTC playbooks. Your Brand Guide connects them all so every specialist already knows your brand before they start working.
           </p>
         </div>
       </div>
@@ -735,7 +737,7 @@ function ThreeSteps() {
             </div>
             <h3 className="text-[#333] text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-4">Download and drop into Claude</h3>
             <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
-              Purchase your team, download the pack, and add it to Claude. All 14 specialists activate instantly. No setup wizards, no configuration screens, no onboarding calls. If you can drag and drop a file, you can do this.
+              Purchase your team, download the pack, and add it to Claude (Anthropic&apos;s AI assistant). All 14 specialists activate instantly. If you can drag and drop a file, you can do this. No terminal. No code. No configuration screens.
             </p>
           </div>
           <div className="flex-1 max-lg:hidden" />
@@ -768,7 +770,7 @@ function ThreeSteps() {
             </div>
             <h3 className="text-[#333] text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-4">Teach your team who you are (just once)</h3>
             <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
-              Your Brand Strategist walks you through a friendly conversation to capture your voice, products, customers, and goals. It takes about 15 minutes and feels like an intake call with a new agency — except this one remembers everything forever.
+              Your Brand Strategist walks you through a 15-minute conversation to capture your voice, products, customers, and competitive landscape. It feels like the intake call with a new agency — except this one remembers everything permanently.
             </p>
           </div>
           <div className="flex-1 max-lg:hidden" />
@@ -793,7 +795,7 @@ function ThreeSteps() {
             </div>
             <h3 className="text-[#333] text-[36px] max-sm:text-[28px] leading-[1.2] tracking-[-1.44px] mb-4">Talk to your team like you&apos;d talk to a coworker</h3>
             <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px]">
-              That&apos;s it. Ask for anything: &ldquo;Write me a Black Friday email.&rdquo; &ldquo;Audit my product page.&rdquo; &ldquo;What&apos;s my real cost per customer?&rdquo; Your team delivers production-ready work, personalized to your brand, in minutes.
+              &ldquo;Write me a Black Friday email sequence.&rdquo; &ldquo;Audit my product page.&rdquo; &ldquo;What&apos;s my real cost per customer?&rdquo; &ldquo;Plan my spring launch.&rdquo; Your team delivers production-ready work, personalized to your brand, in minutes.
             </p>
           </div>
           <div className="flex-1 max-lg:hidden" />
@@ -836,8 +838,9 @@ function Pricing() {
               </div>
               <p className="text-[#7b7b7b] text-[14px] leading-[1.2] tracking-[-0.28px]">Less than $7 per skill · Launch Price</p>
               <div className="h-px bg-[#c8bfb3] my-6" />
+              <p className="text-[#666] text-[14px] leading-[1.2] tracking-[-0.28px] font-medium mb-2">What&apos;s included:</p>
               <div className="space-y-4">
-                {["All 14 AI team members", "Brand Guide to ensure answers are unique to your business", "Every future update included free", "Lifetime access + updates"].map((f) => (
+                {["All 14 AI specialists — email, ads, CFO, pricing, launches, and more", "Brand Guide Builder so every answer is unique to your business", "Works inside Claude (Anthropic's AI) via Cowork or Claude Code", "Every future update and new team member included free", "Lifetime access — buy once, use forever"].map((f) => (
                   <div key={f} className="flex gap-[7px] items-start">
                     <Image src="/assets/check.svg" alt="" width={18} height={18} className="shrink-0" />
                     <p className="text-[#666] text-[14px] leading-[1.2] tracking-[-0.28px]">{f}</p>
