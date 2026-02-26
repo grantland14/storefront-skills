@@ -882,9 +882,9 @@ function DataSection() {
           <circle cx="824" cy="230" r="2.5" fill="#d97757" opacity="0.5" />
         </svg>
 
-        {/* Center Shopify hub */}
+        {/* Center Claude hub */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92px] h-[92px] bg-[#fffaf6] rounded-full shadow-[0px_2px_12.3px_5px_rgba(217,119,87,0.2)] overflow-hidden flex items-center justify-center z-10">
-          <Image src="/assets/shopify.svg" alt="Your Store" width={46} height={53} />
+          <Image src="/assets/claude-logo.svg" alt="Claude" width={46} height={46} />
         </div>
 
         {/* Right side — data insight cards */}
