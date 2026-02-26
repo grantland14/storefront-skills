@@ -5,12 +5,6 @@ export const metadata: Metadata = {
   title: "Storefront Skills — Claude Skills for eCommerce Founders",
   description:
     "14 Claude Skills designed to help eCommerce founders drive better results using AI.",
-  icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-    ],
-    apple: "/favicon.png",
-  },
   openGraph: {
     title: "Storefront Skills — Claude Skills for eCommerce Founders",
     description:

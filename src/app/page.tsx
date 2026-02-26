@@ -293,10 +293,10 @@ function BrandGuideComparison() {
         {/* Header */}
         <div className="text-center max-w-[567px] flex flex-col gap-6">
           <h2 className="font-[family-name:var(--font-serif)] italic text-[#303030] text-[45px] max-sm:text-[32px] leading-[1.2] tracking-[-1.8px]">
-            You&apos;ve already told AI about your brand. Five times this week.
+            You didn&apos;t start a brand to sound like everyone else.
           </h2>
           <p className="text-[#666] text-[17px] leading-[1.4] tracking-[-0.34px] mx-auto">
-            Every other AI tool starts from zero. Claude Skills are trained on your brand — your voice, your products, your margins, your customers. Build your Brand Guide, and every specialist uses that context forever.
+            Every other AI tool starts from zero. Storefront&apos;s Claude Skills are trained on your brand — your voice, your products, your margins, your customers. Build your Brand Guide, and every specialist uses that context forever.
           </p>
         </div>
 
